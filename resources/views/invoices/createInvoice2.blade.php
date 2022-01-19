@@ -619,8 +619,8 @@
 
                                                             <select name="t1subtype[]" required id="t1subtype"
                                                                 class="form-control form-control-sm form-select">
-                                                                <option disabled selected
-                                                                    style="font-size: 15px;width: 100px;">نوع الضريبة
+                                                                <option  selected value="V009"
+                                                                    style="font-size: 15px;width: 100px;">سلعة عامة
                                                                 </option>
                                                                 @foreach ($taxTypes as $type)
                                                                     @if ($type->parent === 'T1')
@@ -649,7 +649,7 @@
                                                                 Type")</label>
                                                             <select name="t4subtype[]" required id="t4subtype"
                                                                 class="form-control form-control-sm form-select">
-                                                                <option disabled selected>@lang("site.Tax t4 Type")</option>
+                                                                <option value="W015" selected>إعفاء</option>
                                                                 @foreach ($taxTypes as $type)
                                                                     @if ($type->parent === 'T4')
                                                                         <option value="{{ $type->code }}"
@@ -920,8 +920,9 @@
                                             added Type")</label>
 
                                         <select name="t1subtype[]" required id="t1subtype" class="form-control form-control-sm form-select">
-                                            <option disabled selected style="font-size: 15px;width: 100px;">نوع الضريبة
-                                            </option>
+                                              <option  selected value="V009" style="font-size: 15px;width: 100px;">
+                                                                    سلعة عامة
+                                                                </option>
                                             @foreach ($taxTypes as $type)
                                                 @if ($type->parent === 'T1')
                                                     <option value="{{ $type->code }}" style="font-size: 15px;width: 100px;">
@@ -942,7 +943,7 @@
                                         <label for="inputProductTitle" class="form-label">@lang("site.Tax t4
                                             Type")</label>
                                         <select name="t4subtype[]" required id="t4subtype" class="form-control form-control-sm form-select">
-                                            <option disabled selected>@lang("site.Tax t4 Type")</option>
+                                             <option value="W015" selected>إعفاء</option>
                                             @foreach ($taxTypes as $type)
                                                 @if ($type->parent === 'T4')
                                                     <option value="{{ $type->code }}" style="font-size: 15px;width: 100px;">
